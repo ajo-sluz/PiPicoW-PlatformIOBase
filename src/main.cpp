@@ -21,6 +21,12 @@ bool fetchGateState(HTTPClient http) {
   http.begin(SERVER + "/api/gatestate/" + GATE_TYPE);
   if (http.GET() == 200) {
     return (bool)http.getString();
+  } else if (http.GET == 400) {
+    Serial.println("HTTP GET Failed. Couldn't reach endpoint.");
+    Serial.println("Retrying in 5 seconds...");
+    Serial.println();
+    delay(5000);
+    return false
   } else {
     return false;
   }
