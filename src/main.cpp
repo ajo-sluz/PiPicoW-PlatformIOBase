@@ -17,10 +17,10 @@ const String SERVER = "http://192.168.254.254";
 // Gate-type: entry | exit
 const String GATE_TYPE = "entry";
 
-bool fetchGatestate(HTTPClient http) {
+bool fetchGateState(HTTPClient http) {
   http.begin(SERVER + "/api/gatestate/" + GATE_TYPE);
   if (http.GET() == 200) {
-    return (bool)fetchGateState(http).getString();
+    return (bool)http.getString();
   } else {
     return false;
   }
