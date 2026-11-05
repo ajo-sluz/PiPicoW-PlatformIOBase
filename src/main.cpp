@@ -3,8 +3,9 @@
 #include <Servo.h>
 #include <Wifi.h>
 
-// Servo + Gate Pin GP-Nr.
 const Servo servo;
+
+// Servo + Gate Pin GP-Nr.
 const int SERVO_OUT_PIN = 16;
 
 // Wifi Credentials
