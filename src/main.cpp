@@ -27,7 +27,7 @@ bool fetchGateState(HTTPClient http) {
     Serial.println("Retrying in 5 seconds...");
     Serial.println();
     delay(5000);
-    return false
+    return false;
   } else {
     return false;
   }
